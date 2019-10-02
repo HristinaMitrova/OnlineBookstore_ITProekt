@@ -1,0 +1,16 @@
+﻿@model Bookstore_ITProekt.Models.AddToCart
+@{
+    ViewBag.Title = "AddToCart";
+}
+
+<h2>Add To Cart</h2>
+@using (Html.BeginForm("AddToCart", "Books1"))
+{
+    <div class="form-group">
+        @Html.DropDownListFor(m => m.bookId,new SelectList(Model.books,"ID","Name"),new { @class ="form-control"})
+        
+    </div>
+    
+    <button class="btn btn-primary " type="submit">Add</button>
+}
+
